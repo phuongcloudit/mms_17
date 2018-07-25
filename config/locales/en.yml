@@ -40,9 +40,41 @@ en:
       help: "Help"
       about: "About"
       login: "Login"
+    admin:
+      leftbar:
+        admin: "Admin"
   shared:
     error_messages:
       the_form: "The form contains"
   error:
     one: " %{count} error"
     other: " %{count} errors"
+    admin:
+      header:
+        settings: "Setings"
+        profile: "Profile"
+        logout: "Logout"
+      application:
+        admin_cpanel: "Admin CPanel"
+      leftbar:
+        fontend: "Frontend Developer"
+        user: "User"
+        team: "Team"
+        skill: "Skill"
+        project: "Project"
+        position: "Position"
+        activity_log: "Activity log"
+  admin:
+    users:
+      new:
+        title: "Create User"
+        register: "Register"
+        enter_fullname: "Enter full name"
+        enter_email: "Enter email address"
+        enter_pass: "Enter password"
+        cancel: "Cancel"
+        name: "name"
+        email: "email"
+        password: "password"
+        pass_conf: "password_confirmation"
+        birthday: "birthday"

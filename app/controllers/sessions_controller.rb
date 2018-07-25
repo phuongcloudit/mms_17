@@ -6,8 +6,10 @@ class SessionsController < ApplicationController
     if user&.authenticate params[:session][:password]
 
     else
-      flash.now[:danger] = t("invalid")
+      flash.now[:danger] = t(".invalid")
       render :new
     end
   end
+
+  def destroy; end
 end
