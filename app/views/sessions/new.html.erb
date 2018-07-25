@@ -1,0 +1,38 @@
+<% provide :title, t(".title") %>
+<section class="material-half-bg">
+  <div class="cover"></div>
+</section>
+<section class="login-content">
+  <div class="logo">
+    <h1><%= t ".vali_logo" %></h1>
+  </div>
+  <div class="login-box">
+    <div class="login-form">
+      <%= form_for(:session, url: login_path) do |f| %>
+      <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i><%= t ".sign_in" %></h3>
+      <div class="form-group">
+        <%= f.label t(".email") %>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label t(".password") %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <div class="utility">
+          <div class="col-md-6 col-md-offset-3">
+            <%= f.label t(".remember_me") do %>
+            <%= f.check_box :remember_me %>
+            <span><%= t ".remember" %></span>
+          <% end %>
+          </div>
+          <p class="semibold-text mb-2"><a href="#" data-toggle="flip"><%= t ".forgot_pass" %></a></p>
+        </div>
+      </div>
+      <div class="form-group btn-container">
+      <%= f.submit t(".sign_in"), class: "btn btn-primary btn-block" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

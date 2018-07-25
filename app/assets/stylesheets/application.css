@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require homepage
+ *= require bootstrap.min
+ *= require font-awesome.min
+ *= require main
+ *= require font-awesome
  */

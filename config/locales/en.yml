@@ -3,4 +3,37 @@
 
 en:
   hello: "Hello world"
-  mms17: "MMS17"
+  mms: "Member Management System"
+  copyright: "Copyright © Member Management System Website 2018"
+  layouts:
+    application:
+      mms17: "MMS17"
+  static_pages:
+    home:
+      title: "Home"
+      welcome_to: "Welcome to"
+      mms: "Member Management System"
+      wwd: "What We Do"
+      dangnhap: "Dang nhap he thong"
+      login_now: "Login now"
+      contact_us: "Contact Us"
+      li_thuong_kiet: "Li Thuong Kiet, Da Nang"
+      phone: "Phone: "
+      email: "Email: "
+      login: "Log in »"
+  sessions:
+    new:
+      title: "Log in"
+      vali_logo: "Vali"
+      email: "email"
+      password: "password"
+      remember_me: "remember_me"
+      remember: "Stay Sign in"
+      forgot_pass: "Forgot Password ?"
+      sign_in: "SIGN IN"
+  layouts:
+    header:
+      home: "Home"
+      help: "Help"
+      about: "About"
+      login: "Login"
