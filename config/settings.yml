@@ -1,2 +1,5 @@
 email: dongphuong2102@gmail.com
 phone: (+84) 985 441 031
+name_max: 50
+email_max: 50
+pass_min: 6

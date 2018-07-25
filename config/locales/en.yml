@@ -4,6 +4,7 @@
 en:
   hello: "Hello world"
   mms: "Member Management System"
+  title: "Member Management System"
   copyright: "Copyright © Member Management System Website 2018"
   layouts:
     application:
@@ -31,9 +32,17 @@ en:
       remember: "Stay Sign in"
       forgot_pass: "Forgot Password ?"
       sign_in: "SIGN IN"
+    create:
+      invalid: "Invalid email/password combination"
   layouts:
     header:
       home: "Home"
       help: "Help"
       about: "About"
       login: "Login"
+  shared:
+    error_messages:
+      the_form: "The form contains"
+  error:
+    one: " %{count} error"
+    other: " %{count} errors"
