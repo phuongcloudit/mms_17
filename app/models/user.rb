@@ -9,6 +9,8 @@ class User < ApplicationRecord
             length: {minimum: 6}, allow_nil: true
   has_secure_password
 
+  scope :newest, ->{order(created_at: :desc)}
+
   def downcase_email
     self.email = email.downcase
   end

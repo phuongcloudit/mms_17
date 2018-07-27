@@ -108,3 +108,42 @@ en:
         admin: "Admin"
       position:
         sure: "Sure ?"
+    teams:
+      new:
+        title: "New Team"
+        new_team: "New Team"
+        admin: "Admin"
+        name: "name"
+        description: "description"
+        member: "member"
+        empty_member: "Empty Member"
+        leader: "leader"
+        add: "Add"
+        enter_name: "Enter new Team"
+      index:
+        title: "Team"
+        description: "Description"
+        action: "Action"
+        name: "Name"
+        leader: "Leader"
+        member: "Member"
+      create:
+        created: "Create new team successfull!"
+      destroy:
+        deleted: "A team deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"
+      team:
+        sure: "Sure ?"
+      edit:
+        title: "Edit Team"
+        edit_team: "Update Team info"
+        admin: "Admin"
+        name: "name"
+        description: "description"
+        member: "member"
+        empty_member: "Empty Member"
+        leader: "leader"
+        add: "Update"
+        enter_name: "Enter new Team"

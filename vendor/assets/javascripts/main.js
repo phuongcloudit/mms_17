@@ -30,3 +30,8 @@
 		$('.login-box').toggleClass('flipped');
 		return false;
 	});
+
+	$(document).ready(function() {
+		$('#team_user_ids').select2();
+	});
+

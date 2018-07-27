@@ -1,0 +1,43 @@
+<% provide :title, t(".title") %>
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i><%= t ".data_table" %></h1>
+    <p><%= t ".table_to" %></p>
+  </div>
+  <ul class="app-breadcrumb breadcrumb side">
+    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+    <li class="breadcrumb-item"><%= t ".admin" %></li>
+    <li class="breadcrumb-item active"><a href="#"><%= t ".title" %></a></li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-12">
+     <%= render "shared/messages" %>
+    <div class="tile">
+      <%= link_to fa_icon("plus", text: "Add"), add_member_admin_team_path(@team), class: "btn btn-info" %>
+      <div class="tile-body">
+        <table class="table table-hover table-bordered" id="sampleTable">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Name</th>
+              <th width="20%"><%= t ".action" %></th>
+            </tr>
+          </thead>
+        <% @users.each_with_index do |u, index| %>
+        <tr id="user_<%= u.id %>">
+          <th scope="row" class="count_user">
+            <%= get_order_number params[:page], index %>
+          </th>
+          <td><%= u.name %></td>
+          <td><%= link_to t("admin.teams.team.move_user"), "",remote: true %> |
+              <%= link_to t("admin.teams.team.delete"), "", method: :delete, data: {confirm: t("admin.teams.team.confirm_delete")},remote: true %></td>
+        </tr>
+        <% end %>
+      </tbody>
+        </table>
+      </div>
+      <%= will_paginate @users %>
+    </div>
+  </div>
+</div>
