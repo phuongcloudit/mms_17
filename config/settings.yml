@@ -8,7 +8,7 @@ user:
     max_length: 50
   password:
     min_length: 6
-positon:
+position:
   name:
     max_length: 50
   sname:
