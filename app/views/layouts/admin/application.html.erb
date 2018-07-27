@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= yield(:title) %> | <%= t "mms" %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+</head>
+<body class="app sidebar-mini rtl">
+  <header class="app-header"><%= link_to t(".admin_cpanel"), "", class: "app-header__logo" %>
+    <%= render "layouts/admin/header" %>
+  </header>
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+    <%= render "layouts/admin/leftbar" %>
+  </aside>
+  <main class="app-content">
+   <%= yield %>
+ </main>
+ <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+</body>
+</html>

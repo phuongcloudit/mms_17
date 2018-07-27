@@ -31,9 +31,80 @@ en:
       remember: "Stay Sign in"
       forgot_pass: "Forgot Password ?"
       sign_in: "SIGN IN"
+    create:
+      invalid: "Invalid email/password combination"
   layouts:
     header:
       home: "Home"
       help: "Help"
       about: "About"
       login: "Login"
+    admin:
+      header:
+        hide: "Hide Sidebar"
+        open_profile: "Open Profile Menu"
+        settings: "Setings"
+        profile: "Profile"
+        logout: "Logout"
+      application:
+        admin_cpanel: "Admin CPanel"
+      leftbar:
+        admin: "Admin"
+        fontend: "Frontend Developer"
+        user: "User"
+        team: "Team"
+        skill: "Skill"
+        project: "Project"
+        position: "Position"
+        activity_log: "Activity log"
+  admin:
+    users:
+      new:
+        title: "Create User"
+        register: "Register"
+        enter_fullname: "Enter full name"
+        enter_email: "Enter email address"
+        enter_pass: "Enter password"
+        cancel: "Cancel"
+        name: "name"
+        email: "email"
+        password: "password"
+        pass_conf: "password_confirmation"
+        birthday: "birthday"
+        avatar: "Avatar"
+    positions:
+      create:
+        created: "Create new position successfull!"
+      destroy:
+        deleted: "A position deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"
+      edit:
+        title: "Edit position"
+        edit_position: "Edit position"
+        admin: "Admin"
+        update: "Update"
+        name: "name"
+        short_name: "short_name"
+        description: "description"
+      index:
+        title: "Position"
+        admin: "Admin"
+        table_to: "Table to display all position"
+        data_table: "Data Table"
+        name: "Position name"
+        description: "Description"
+        action: "Action"
+      new:
+        title: "New position"
+        new_position: "New position"
+        add: "Add"
+        name: "name"
+        short_name: "short_name"
+        description: "description"
+        enter_name: "Enter new position"
+        enter_sname: "Enter short name position"
+        admin: "Admin"
+      position:
+        sure: "Sure ?"

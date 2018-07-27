@@ -1,0 +1,14 @@
+<a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="<%= t ".hide" %>"></a>
+ <ul class="app-nav">
+  <li class="app-search">
+    <input class="app-search__input" type="search" placeholder="Search">
+    <button class="app-search__button"><i class="fa fa-search"></i></button>
+  </li>
+  <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="<%= t ".open_profile" %>"><i class="fa fa-user fa-lg"></i></a>
+    <ul class="dropdown-menu settings-menu dropdown-menu-right">
+      <li><%= link_to fa_icon("cog lg", text: t(".settings")), root_path, class: "dropdown-item" %></li>
+      <li><%= link_to fa_icon("user lg", text: t(".profile")), root_path, class: "dropdown-item" %></li>
+      <li><%= link_to fa_icon("sign-out lg", text: t(".logout")), root_path, class: "dropdown-item" %></li>
+    </ul>
+  </li>
+</ul>

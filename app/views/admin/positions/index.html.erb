@@ -1,0 +1,36 @@
+<% provide :title, t(".title") %>
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i><%= t ".data_table" %></h1>
+    <p><%= t ".table_to" %></p>
+  </div>
+  <ul class="app-breadcrumb breadcrumb side">
+    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+    <li class="breadcrumb-item"><%= t ".admin" %></li>
+    <li class="breadcrumb-item active"><a href="#"><%= t ".title" %></a></li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-12">
+     <%= render "shared/messages" %>
+    <div class="tile">
+      <%= link_to fa_icon("plus", text: "Add"), new_admin_position_path, class: "btn btn-info" %>
+      <div class="tile-body">
+        <table class="table table-hover table-bordered" id="sampleTable">
+          <thead>
+            <tr>
+              <th><%= t ".name" %></th>
+              <th><%= t ".short_name" %></th>
+              <th><%= t ".description" %></th>
+              <th width="20%"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @positions %>
+          </tbody>
+        </table>
+      </div>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

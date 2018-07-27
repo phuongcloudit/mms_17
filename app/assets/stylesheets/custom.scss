@@ -1,0 +1,9 @@
+@import "color";
+
+#error_explanation {
+  color: $error_color;
+  ul {
+    color: $error_color;
+    margin: 0 0 30px 0;
+  }
+}

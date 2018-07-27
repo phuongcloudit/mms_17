@@ -1,0 +1,9 @@
+<tr>
+  <td><%= position.name %></td>
+  <td><%= position.short_name %></td>
+  <td><%= position.description %></td>
+  <td>
+    <%= link_to fa_icon("edit"), edit_admin_position_path(position), class: "btn btn-info" %>
+    <%= link_to fa_icon("remove"), admin_position_path(position) , method: :delete, data: { confirm: t(".sure") }, class: "btn btn-danger" %>
+  </td
+</tr>

@@ -1,0 +1,14 @@
+ <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg">
+  <div>
+    <p class="app-sidebar__user-name"><%= t ".admin" %></p>
+    <p class="app-sidebar__user-designation"><%= t ".fontend" %></p>
+  </div>
+</div>
+<ul class="app-menu">
+  <li><%= link_to fa_icon("dashboard", text: t(".user")), "", class: "app-menu__item" %></li>
+  <li><%= link_to fa_icon("file-text", text: t(".team")), "", class: "app-menu__item" %></li>
+  <li><%= link_to fa_icon("file-text", text: t(".project")), "", class: "app-menu__item" %></li>
+  <li><%= link_to fa_icon("file-text", text: t(".skill")), "", class: "app-menu__item" %></li>
+  <li><%= link_to fa_icon("file-text", text: t(".position")), admin_positions_path, class: "app-menu__item" %></li>
+  <li><%= link_to fa_icon("file-text", text: t(".activity_log")), "", class: "app-menu__item" %></li>
+</ul>
