@@ -57,6 +57,7 @@ en:
       application:
         admin_cpanel: "Admin CPanel"
       leftbar:
+        admin: "Admin"
         fontend: "Frontend Developer"
         user: "User"
         team: "Team"
@@ -78,3 +79,38 @@ en:
         password: "password"
         pass_conf: "password_confirmation"
         birthday: "birthday"
+        avatar: "Avatar"
+    positions:
+      create:
+        created: "Create new position successfull!"
+      destroy:
+        deleted: "A position deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"
+      edit:
+        title: "Edit position"
+        edit_position: "Edit position"
+        admin: "Admin"
+      index:
+        title: "Position"
+        admin: "Admin"
+        table_to: "Table to display all position"
+        data_table: "Data Table"
+        name: "Position name"
+        description: "Description"
+        action: "Action"
+        add: "Add"
+      new:
+        title: "New position"
+        new_position: "New position"
+        admin: "Admin"
+      form:
+        submit: "Submit"
+        name: "name"
+        short_name: "short_name"
+        description: "description"
+        enter_name: "Enter position name"
+        enter_sname: "Enter short name position"
+      position:
+        sure: "Sure ?"
