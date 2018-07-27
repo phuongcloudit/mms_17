@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :positions
+    resources :teams do
+      member do
+         get "add-member", to: "teams#add_member"
+         patch "add-member", to: "teams#update_member"
+      end
+    end
   end
 end

@@ -41,15 +41,6 @@ en:
       about: "About"
       login: "Login"
     admin:
-      leftbar:
-        admin: "Admin"
-  shared:
-    error_messages:
-      the_form: "The form contains"
-  error:
-    one: " %{count} error"
-    other: " %{count} errors"
-    admin:
       header:
         settings: "Setings"
         profile: "Profile"
@@ -65,6 +56,12 @@ en:
         project: "Project"
         position: "Position"
         activity_log: "Activity log"
+  shared:
+    error_messages:
+      the_form: "The form contains"
+  error:
+    one: " %{count} error"
+    other: " %{count} errors"
   admin:
     users:
       new:
@@ -112,5 +109,69 @@ en:
         description: "description"
         enter_name: "Enter position name"
         enter_sname: "Enter short name position"
+      new:
+        title: "New position"
+        new_position: "New position"
+        add: "Add"
+        name: "name"
+        short_name: "short_name"
+        description: "description"
+        enter_name: "Enter new position"
+        enter_sname: "Enter short name position"
+        admin: "Admin"
       position:
         sure: "Sure ?"
+    teams:
+      new:
+        title: "New Team"
+        new_team: "New Team"
+        admin: "Admin"
+        leader: "leader"
+      index:
+        title: "Team"
+        data_table: "Data table"
+        table_to: "Table to display all teams"
+        description: "Description"
+        action: "Action"
+        name: "Name"
+        leader: "Leader"
+        member: "Member"
+      create:
+        created: "Create new team successfull!"
+      destroy:
+        deleted: "A team deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"
+      team:
+        sure: "Sure ?"
+      edit:
+        title: "Edit Team"
+        edit_team: "Update Team info"
+        admin: "Admin"
+      add_member:
+        title: "Add member"
+      add_member_form:
+        update: "Update"
+        choose_members: "Choose member"
+      update_member:
+        update_success: "Update successfull!"
+        update_fail: "Update fail!"
+      form:
+        name: "name"
+        description: "description"
+        member: "member"
+        leader: "leader"
+        submit: "Submit"
+      show:
+        title: "All member"
+        admin: "Admin"
+        data_table: "Data table"
+        table_to: "Table to display all teams"
+        add_member: "Add member"
+        move_user: "Move user"
+        delete: "Delete"
+        comfirm_delete: "Comfirm delete"
+        action: "Action"
+        stt: "STT"
+        name: "Name"

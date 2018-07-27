@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to team.name, admin_team_path(team) %></td>
+  <td><%= team.description %></td>
+  <td><%= %></td>
+  <td><%= team.users.size %></td>
+  <td>
+    <%= link_to fa_icon("edit"), edit_admin_team_path(team), class: "btn btn-info" %>
+    <%= link_to fa_icon("remove"), admin_team_path(team) , method: :delete, data: { confirm: t(".sure") }, class: "btn btn-danger" %>
+  </td>
+</tr>

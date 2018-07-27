@@ -11,7 +11,9 @@ gem "faker"
 gem "font-awesome-rails"
 gem "jquery-rails"
 gem "mini_magick"
+gem "pry-rails"
 gem "rubocop", "~> 0.53.0"
+gem "select2-rails"
 gem "will_paginate"
 
 gem "bootsnap", ">= 1.1.0", require: false
@@ -25,8 +27,9 @@ gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
-  gem "rspec-rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "rspec-rails"
 end
 
 group :development do

@@ -1,5 +1,6 @@
 class Admin::PositionsController < Admin::ApplicationController
   before_action :load_position, only: %i(edit update destroy)
+
   def index
     @positions = Position.paginate(page: params[:page], per_page: 5)
   end
