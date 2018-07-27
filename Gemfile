@@ -3,6 +3,8 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.1"
 
+gem "pry-rails"
+gem "select2-rails"
 gem "bcrypt"
 gem "bootstrap-sass"
 gem "bootstrap-will_paginate"

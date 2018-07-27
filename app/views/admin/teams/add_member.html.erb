@@ -1,0 +1,21 @@
+<% provide :title, t(".title") + ": #{@team.name}" %>
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i><%= t ".new_team" %></h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb side">
+    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+    <li class="breadcrumb-item"><%= t ".admin" %></li>
+    <li class="breadcrumb-item active"><a href="#"><%= t ".new_team" %></a></li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="tile">
+      <div class="tile-body">
+        <h1><%= t ".add_member" %> - <%= @team.name %></h1>
+        <%= render "add_member_form" %>
+      </div>
+    </div>
+  </div>
+</div>
