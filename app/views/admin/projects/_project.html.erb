@@ -1,0 +1,14 @@
+<tr>
+  <td><%= link_to project.name, admin_project_path(project) %></td>
+  <td><%= project.short_name %></td>
+  <td><%= project.description %></td>
+  <td><%= project.start_date %></td>
+  <td><%= project.end_date %></td>
+  <td><%= project.leader.name if project.leader %></td>
+  <td><%= project.team_id %></td>
+  <td></td>
+  <td>
+    <%= link_to fa_icon("edit"), edit_admin_project_path(project), class: "btn btn-info" %>
+    <%= link_to fa_icon("remove"), admin_project_path(project) , method: :delete, data: { confirm: t(".sure") }, class: "btn btn-danger" %>
+  </td>
+</tr>
