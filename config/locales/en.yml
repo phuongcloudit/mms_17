@@ -113,15 +113,10 @@ en:
         title: "New Team"
         new_team: "New Team"
         admin: "Admin"
-        name: "name"
-        description: "description"
-        member: "member"
-        empty_member: "Empty Member"
         leader: "leader"
-        add: "Add"
-        enter_name: "Enter new Team"
       index:
         title: "Team"
+        table_to: "Table to display all teams"
         description: "Description"
         action: "Action"
         name: "Name"
@@ -140,10 +135,39 @@ en:
         title: "Edit Team"
         edit_team: "Update Team info"
         admin: "Admin"
+      add_member:
+        update: "Update"
+        empty_member: "Empty Member"
+      form:
         name: "name"
         description: "description"
         member: "member"
-        empty_member: "Empty Member"
         leader: "leader"
-        add: "Update"
-        enter_name: "Enter new Team"
+        submit: "Submit"
+    projects:
+      new:
+        title: "New Project"
+        new_team: "New Project"
+        admin: "Admin"
+      index:
+        title: "Projects"
+      form:
+        name: "name"
+        short_name: "Short name"
+        description: "description"
+        submit: "Submit"
+        enter_name: "Enter new Project name"
+        enter_sname: "Enter short name of project"
+        start_date: "Start Date"
+        end_date: "End Date"
+        leader: "leader"
+        choose_leader: "Choose Leader"
+        team: "team"
+        choose_team: "Choose Team"
+      create:
+        created: "Create new project successfull!"
+      destroy:
+        deleted: "A project deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"

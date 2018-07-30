@@ -14,5 +14,6 @@ Rails.application.routes.draw do
          patch "add-member", to: "teams#update_member"
       end
     end
+    resources :projects
   end
 end

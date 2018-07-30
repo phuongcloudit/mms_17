@@ -10,6 +10,7 @@ class Admin::TeamsController < Admin::ApplicationController
   end
 
   def update
+    @users = User.all
     if @team.update team_params
       flash[:success] = t ".updated"
       redirect_to admin_teams_path
@@ -27,6 +28,7 @@ class Admin::TeamsController < Admin::ApplicationController
   end
 
   def create
+    @users = User.all
     @team = Team.new team_params
     if @team.save
       flash[:success] = t ".created"
