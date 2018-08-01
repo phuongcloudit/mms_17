@@ -171,3 +171,29 @@ en:
         delete_err: "Delete error!"
       update:
         updated: "Updated successfull!"
+    skills:
+      new:
+        title: "New Skill"
+        new_skill: "New Skill"
+        admin: "Admin"
+      edit:
+        title: "Edit Skill"
+        edit_skill: "Update Skill info"
+        admin: "Admin"
+      index:
+        title: "Skills"
+        table_to: "Table to display all skills"
+        data_table: "Data Table"
+      form:
+        name: "name"
+        submit: "Submit"
+        enter_name: "Enter new Skill name"
+      create:
+        created: "Create new skill successfull!"
+      destroy:
+        deleted: "A skill deleted!"
+        delete_err: "Delete error!"
+      update:
+        updated: "Updated successfull!"
+      skill:
+        sure: "Sure ?"

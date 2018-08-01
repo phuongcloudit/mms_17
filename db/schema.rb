@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_31_080009) do
+ActiveRecord::Schema.define(version: 2018_08_01_074220) do
 
   create_table "positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 2018_07_31_080009) do
   end
 
   create_table "project_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
+    t.bigint "project_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_users_on_project_id"
+    t.index ["user_id"], name: "index_project_users_on_user_id"
   end
 
   create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -37,6 +39,23 @@ ActiveRecord::Schema.define(version: 2018_07_31_080009) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "team_id"
+  end
+
+  create_table "skill_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "skill_id"
+    t.bigint "user_id"
+    t.integer "level"
+    t.integer "experience_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["skill_id"], name: "index_skill_users_on_skill_id"
+    t.index ["user_id"], name: "index_skill_users_on_user_id"
+  end
+
+  create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -57,6 +76,11 @@ ActiveRecord::Schema.define(version: 2018_07_31_080009) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.integer "leader_id"
+    t.boolean "admin"
   end
 
+  add_foreign_key "project_users", "projects"
+  add_foreign_key "project_users", "users"
+  add_foreign_key "skill_users", "skills"
+  add_foreign_key "skill_users", "users"
 end
