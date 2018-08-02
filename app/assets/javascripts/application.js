@@ -19,3 +19,5 @@
 //= require jquery.min
 //= require pace.min
 //= require popper.min
+//= require select2
+//= require custom

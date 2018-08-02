@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
-  has_many :users
   validates :name, presence: true
-  belongs_to :leader, class_name: User.name, foreign_key: :leader_id
-  belongs_to :team, foreign_key: :team_id
+  has_many :project_users, dependent: :destroy
+  has_many :user, through: :project_users
+  accepts_nested_attributes_for :project_users, allow_destroy: true
 
 end

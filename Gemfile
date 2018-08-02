@@ -3,6 +3,9 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.1"
 
+gem "carrierwave"
+gem "mini_magick"
+gem "select2-rails"
 gem "bcrypt"
 gem "bootstrap-sass"
 gem "bootstrap-will_paginate"
@@ -33,6 +36,10 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
+end
+
+group :production do
+  gem "fog"
 end
 
 group :test do

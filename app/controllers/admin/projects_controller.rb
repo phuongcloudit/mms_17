@@ -14,7 +14,12 @@ class Admin::ProjectsController < Admin::ApplicationController
     @users = User.all
     @teams = Team.all
     @project = Project.new project_params
-    if @project.save
+    params[:project][:leader_id].each do | y |
+      if !y.empty?
+        @project.project_users.build(user_id: y)
+        end
+      end
+    if @project.save project_params
      flash[:success] = t ".created"
       redirect_to admin_projects_path
     else

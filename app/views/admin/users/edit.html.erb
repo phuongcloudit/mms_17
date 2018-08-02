@@ -1,17 +1,18 @@
 <% provide :title, t(".title") %>
 <div class="app-title">
   <div>
-    <h1><i class="fa fa-th-list"></i><%= t ".new_user" %></h1>
+    <h1><i class="fa fa-th-list"></i><%= t ".edit_user" %></h1>
   </div>
   <ul class="app-breadcrumb breadcrumb side">
     <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
     <li class="breadcrumb-item"><%= t ".admin" %></li>
-    <li class="breadcrumb-item active"><a href="#"><%= t ".new_user" %></a></li>
+    <li class="breadcrumb-item active"><a href="#"><%= t ".edit_user" %></a></li>
   </ul>
 </div>
-<div class="col-md-12">
-  <div class="tile">
-    <h3 class="tile-title"><%= t ".register" %></h3>
+<div class="row">
+  <div class="col-md-12">
+    <div class="tile">
+      <h3 class="tile-title"><%= t ".edit_user" %></h3>
       <div class="tile-body">
         <%= render "form" %>
       </div>

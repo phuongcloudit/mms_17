@@ -58,20 +58,6 @@ en:
         position: "Position"
         activity_log: "Activity log"
   admin:
-    users:
-      new:
-        title: "Create User"
-        register: "Register"
-        enter_fullname: "Enter full name"
-        enter_email: "Enter email address"
-        enter_pass: "Enter password"
-        cancel: "Cancel"
-        name: "name"
-        email: "email"
-        password: "password"
-        pass_conf: "password_confirmation"
-        birthday: "birthday"
-        avatar: "Avatar"
     positions:
       create:
         created: "Create new position successfull!"
@@ -197,3 +183,34 @@ en:
         updated: "Updated successfull!"
       skill:
         sure: "Sure ?"
+    users:
+      new:
+        title: "Create User"
+        new_user: "Create User"
+        register: "Register"
+      edit:
+        title: "Update User"
+        edit_user: "Update User"
+      index:
+        title: "Users"
+        table_to: "Table to display all users"
+        data_table: "Data Table"
+      form:
+        enter_fullname: "Enter full name"
+        enter_email: "Enter email address"
+        enter_pass: "Enter password"
+        cancel: "Cancel"
+        name: "name"
+        email: "email"
+        password: "password"
+        pass_conf: "password_confirmation"
+        birthday: "birthday"
+        avatar: "Avatar"
+        position: "Position"
+        team: "Team"
+        project_join: "Project join"
+        submit: "Submit"
+      update:
+        updated: "Updated successfull!"
+      show:
+        title: "User Info"
