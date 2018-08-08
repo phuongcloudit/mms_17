@@ -1,0 +1,13 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<ul class="teams">
+  <% @users.each_with_index do |u, index| %>
+    <li>
+      <%= get_order_number params[:page], index %>.
+      <%= link_to u.name, u%>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @users%>

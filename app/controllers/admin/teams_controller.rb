@@ -1,17 +1,15 @@
 class Admin::TeamsController < Admin::ApplicationController
-  before_action :load_team, only: %i(edit update destroy show add_member)
+  before_action :load_team, only: %i(edit update destroy show add_member update_member)
+  before_action :load_all_user, only: %i(new edit update add_member create)
   def new
     @team = Team.new
-    @users = User.all
   end
 
   def edit
-    @users = User.all
   end
 
   def update
-    @users = User.all
-    if @team.update team_params
+    if @team.update_attributes team_params
       flash[:success] = t ".updated"
       redirect_to admin_teams_path
     else
@@ -20,15 +18,15 @@ class Admin::TeamsController < Admin::ApplicationController
   end
 
   def index
-    @teams = Team.paginate page: params[:page], per_page: 5
+    @teams = Team.paginate page: params[:page], per_page: Settings.page_team
   end
 
   def show
-    @users = @team.users.newest.paginate page: params[:page], per_page: 10
+    @users = @team.users.newest.paginate page: params[:page],
+                                        per_page: Settings.page_team
   end
 
   def create
-    @users = User.all
     @team = Team.new team_params
     if @team.save
       flash[:success] = t ".created"
@@ -48,7 +46,6 @@ class Admin::TeamsController < Admin::ApplicationController
   end
 
   def add_member
-    @users = User.all
   end
 
   def update_member
@@ -75,5 +72,9 @@ class Admin::TeamsController < Admin::ApplicationController
     return if @team.present?
     flash[:warning] = t ".not_found"
     redirect_to admin_team_path
+  end
+
+  def load_all_user
+    @users = User.all
   end
 end

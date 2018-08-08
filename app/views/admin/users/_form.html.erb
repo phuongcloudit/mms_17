@@ -54,7 +54,7 @@
     <div class="form-group row">
       <%= f.label t(".project_join"), class: "control-label col-md-3" %>
       <div class="col-md-8">
-        <%= select("user", "project_ids", @projects.collect {|p| [ p.name, p.id ] }, { include_blank: true }, class: "form-control", multiple: true) %>
+        <%= select("user", "project_ids", @projects.collect {|p| [ p.name, p.id ] }, {include_hidden: false, include_blank: true }, class: "form-control", multiple: true) %>
       </div>
     </div>
   </div>

@@ -19,7 +19,6 @@
           <%= render "shared/error_messages", object: f.object %>
           <%= collection_select :team, :user_ids, @users, :id, :name, {},
           {:class=>"form-control chosen-select",multiple: true, data: { placeholder: t(".choose_members") }} %>
-          <button type="button" class="btn btn-success btn-block" id="emptymember"><%= t ".empty_member" %></button><br>
           <%= f.submit t(".update") ,class: "btn btn-success btn-block" %>
           <% end %>
         </div>

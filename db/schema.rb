@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_041116) do
+ActiveRecord::Schema.define(version: 2018_08_06_072611) do
 
   create_table "positions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2018_08_03_041116) do
     t.integer "leader_id"
     t.boolean "admin"
     t.integer "position_id"
+    t.string "remember_digest"
   end
 
   add_foreign_key "project_users", "projects"

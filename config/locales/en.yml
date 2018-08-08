@@ -5,6 +5,7 @@ en:
   hello: "Hello world"
   mms: "Member Management System"
   copyright: "Copyright © Member Management System Website 2018"
+  please_log_in: "Please login!"
   layouts:
     application:
       mms17: "MMS17"
@@ -33,6 +34,12 @@ en:
       sign_in: "SIGN IN"
     create:
       invalid: "Invalid email/password combination"
+      welcome: "Dang nhap thanh cong"
+  teams:
+    index:
+      title: "All teams"
+    show:
+      title: "All member in team"
   layouts:
     header:
       home: "Home"
@@ -57,7 +64,13 @@ en:
         project: "Project"
         position: "Position"
         activity_log: "Activity log"
+  shared:
+    error_messages:
+      the_form: "The form contains"
   admin:
+    application:
+      not_access: "Cannot access!"
+      please_log_in: "Please login, thank you!"
     positions:
       create:
         created: "Create new position successfull!"
@@ -122,14 +135,19 @@ en:
         edit_team: "Update Team info"
         admin: "Admin"
       add_member:
+        title: "Add member"
         update: "Update"
         empty_member: "Empty Member"
+      update_member:
+        update_success: "Team Updated!"
       form:
         name: "name"
         description: "description"
         member: "member"
         leader: "leader"
         submit: "Submit"
+      show:
+        title: "Team info"
     projects:
       new:
         title: "New Project"
@@ -137,6 +155,8 @@ en:
         admin: "Admin"
       index:
         title: "Projects"
+      edit:
+        title: "Edit project"
       form:
         name: "name"
         short_name: "Short name"
@@ -214,3 +234,6 @@ en:
         updated: "Updated successfull!"
       show:
         title: "User Info"
+  error:
+    one: " %{count} error"
+    other: " %{count} errors"

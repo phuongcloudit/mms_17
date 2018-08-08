@@ -5,6 +5,7 @@
       <div class="info">
         <img class="user-img" src="<%= @user.avatar %>">
         <h4><%= @user.name %></h4>
+        <p><%= @user.position.name if !@user.position.nil? %></p>
         <p></p>
       </div>
       <div class="cover-image"></div>
@@ -25,18 +26,23 @@
               Name: <%= @user.name %><br>
               Birthday: <%= @user.birthday.strftime("%m/%d/%Y") %><br>
               Email: <%= @user.email %><br>
+              Position: <%= @user.position.name if !@user.position.nil? %>
             </address>
           </div>
           <div class="col-4">
             <strong>Team join: </strong>
             <p>
-              <%= @user.team_id %>
+              <%= @user.team.name if @user.team %>
             </p>
           </div>
           <div class="col-4">
             <strong>Project join: </strong>
             <p>
-
+            <% @user.project.each do |u| %>
+              <li>
+                <%= u.name %>
+              </li>
+            <% end %>
             </p>
           </div>
         </div>

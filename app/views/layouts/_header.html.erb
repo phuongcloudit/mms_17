@@ -9,12 +9,23 @@
         <li class="nav-item active">
           <%= link_to t(".home"), root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item"><%= link_to t(".about"), about_path, class: "nav-link" %>
+        <li class="nav-item"><%= link_to t(".about"), "", class: "nav-link" %>
         </li>
-        <li class="nav-item"><%= link_to t(".help"), help_path, class: "nav-link"%>
+        <li class="nav-item"><%= link_to t(".help"), "", class: "nav-link"%>
         </li>
-        <li class="nav-item"><%= link_to t(".login"), login_path, class: "nav-link"%>
-        </li>
+        <% if logged_in? %>
+        <li class="nav-item"><%= link_to t(".team"), teams_path, class: "nav-link"%>
+        <li class="dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Account</a>
+            <ul class="dropdown-menu settings-menu dropdown-menu-right">
+              <li><%= link_to fa_icon("cog lg", text: t(".settings")), root_path, class: "dropdown-item" %></li>
+              <li><%= link_to fa_icon("user lg", text: t(".profile")), current_user, class: "dropdown-item" %></li>
+              <li><%= link_to fa_icon("sign-out lg", text: t(".logout")), logout_path, method: :delete, class: "dropdown-item" %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item"><%= link_to t(".login"), login_path, class: "nav-link"%>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

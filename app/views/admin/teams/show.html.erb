@@ -21,7 +21,6 @@
             <tr>
               <th>STT</th>
               <th>Name</th>
-              <th width="20%"><%= t ".action" %></th>
             </tr>
           </thead>
         <% @users.each_with_index do |u, index| %>
@@ -30,8 +29,6 @@
             <%= get_order_number params[:page], index %>
           </th>
           <td><%= u.name %></td>
-          <td><%= link_to t("admin.teams.team.move_user"), "",remote: true %> |
-              <%= link_to t("admin.teams.team.delete"), "", method: :delete, data: {confirm: t("admin.teams.team.confirm_delete")},remote: true %></td>
         </tr>
         <% end %>
       </tbody>

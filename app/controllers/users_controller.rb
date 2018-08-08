@@ -1,21 +1,13 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
+  before_action :logged_in
+  def show
+    load_user
   end
 
-  def create
-    @user = User.new user_params
-    if @user.save
-      # Handle a successful save.
-    else
-      render :new
-    end
-  end
-
-  private
-
-  def user_params
-    params.require(:user).permit :name, :email, :password,
-      :password_confirmation
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user.present?
+    flash[:warning] = t ".not_found"
+    redirect_to root_path
   end
 end
