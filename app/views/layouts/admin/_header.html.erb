@@ -8,7 +8,7 @@
     <ul class="dropdown-menu settings-menu dropdown-menu-right">
       <li><%= link_to fa_icon("cog lg", text: t(".settings")), root_path, class: "dropdown-item" %></li>
       <li><%= link_to fa_icon("user lg", text: t(".profile")), current_user, class: "dropdown-item" %></li>
-      <li><%= link_to fa_icon("sign-out lg", text: t(".logout")), logout_path, method: :delete, class: "dropdown-item" %></li>
+      <li><%= link_to fa_icon("sign-out lg", text: t(".logout")), destroy_admin_user_session_path, method: :delete, class: "dropdown-item" %></li>
     </ul>
   </li>
 </ul>

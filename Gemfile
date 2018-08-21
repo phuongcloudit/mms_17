@@ -3,6 +3,9 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.1"
 
+gem "devise"
+gem "cancancan"
+gem "public_activity"
 gem "carrierwave"
 gem "mini_magick"
 gem "select2-rails"

@@ -22,19 +22,38 @@ en:
       phone: "Phone: "
       email: "Email: "
       login: "Log in »"
-  sessions:
-    new:
-      title: "Log in"
-      vali_logo: "Vali"
-      email: "email"
-      password: "password"
-      remember_me: "remember_me"
-      remember: "Stay Sign in"
-      forgot_pass: "Forgot Password ?"
-      sign_in: "SIGN IN"
-    create:
-      invalid: "Invalid email/password combination"
-      welcome: "Dang nhap thanh cong"
+  devise:
+    registrations:
+      form:
+        enter_fullname: "Enter full name"
+        enter_email: "Enter email address"
+        enter_pass: "Enter password"
+        cancel: "Cancel"
+        name: "name"
+        email: "email"
+        password: "password"
+        pass_conf: "password_confirmation"
+        birthday: "birthday"
+        avatar: "Avatar"
+        position: "Position"
+        team: "Team"
+        project_join: "Project join"
+        submit: "Submit"
+      update:
+        updated: "Updated successfull!"
+    sessions:
+      new:
+        title: "Log in"
+        vali_logo: "Member Management System"
+        email: "email"
+        password: "password"
+        remember_me: "remember_me"
+        remember: "Stay Sign in"
+        forgot_pass: "Forgot Password ?"
+        sign_in: "SIGN IN"
+      create:
+        invalid: "Invalid email/password combination"
+        welcome: "Dang nhap thanh cong"
   teams:
     index:
       title: "All teams"
@@ -237,3 +256,4 @@ en:
   error:
     one: " %{count} error"
     other: " %{count} errors"
+

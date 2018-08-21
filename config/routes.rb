@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   root "static_pages#home"
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
+  # get "/login", to: "sessions#new"
+  # post "/login", to: "sessions#create"
+  # delete "/logout", to: "sessions#destroy"
   namespace :admin do
-    resources :users
+    devise_for :users
+    resources :users, only: %i(index show)
     resources :positions
     resources :teams do
       member do
@@ -16,7 +17,9 @@ Rails.application.routes.draw do
     end
     resources :projects
     resources :skills
+    resources :activities
   end
+  devise_for :users
   resources :teams
-  resources :users
+  # resources :users
 end

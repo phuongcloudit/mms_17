@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
+  # include SessionsHelper
 
-  private
+  # private
 
-  def logged_in
-    if logged_in?
-      return
-    end
-    store_location
-    flash[:danger] = t "please_log_in"
-    redirect_to login_path
-  end
+  # def logged_in
+  #   if logged_in?
+  #     return
+  #   end
+  #   store_location
+  #   flash[:danger] = t "please_log_in"
+  #   redirect_to login_path
+  # end
 end

@@ -4,7 +4,7 @@
   <td><%= user.birthday.strftime("%m/%d/%Y") %></td>
   <td><%= user.team.name if user.team %></td>
   <td>
-    <%= link_to fa_icon("edit"), edit_admin_user_path(user), class: "btn btn-info" %>
+    <%= link_to fa_icon("edit"), edit_admin_user_registration_path(user), class: "btn btn-info" %>
     <%= link_to fa_icon("remove"), admin_user_path(user) , method: :delete, data: { confirm: t(".sure") }, class: "btn btn-danger" %>
   </td>
 </tr>

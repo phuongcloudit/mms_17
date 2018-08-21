@@ -5,4 +5,6 @@ class Project < ApplicationRecord
   belongs_to :team
   accepts_nested_attributes_for :project_users, allow_destroy: true
 
+  include PublicActivity::Model
+    tracked owner: ->(controller, model) { controller&.current_user }
 end

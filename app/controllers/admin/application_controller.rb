@@ -1,22 +1,26 @@
 class Admin::ApplicationController < ActionController::Base
-  before_action :logged_in_admin
-  include SessionsHelper
+  include PublicActivity::StoreController
+  include CanCan::ControllerAdditions
+  protect_from_forgery with: :exception
+  before_action :configure_user_parameters, if: :devise_controller?
+  load_and_authorize_resource
 
-  private
-
-  def logged_in_admin
-    if logged_in?
-      check_role
-      return
-    end
-    store_location
-    flash[:danger] = t "admin.application.please_log_in"
-    redirect_to login_path
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:danger] = exception.message
+    redirect_to root_path
   end
 
-  def check_role
-    return if current_user.admin?
-    flash[:danger] = t "admin.application.not_access"
-    redirect_to root_path
+  protected
+
+  def configure_user_parameters
+    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
+      user_params.permit :username, :birthday, :email, :password, :password_confirmation, :avatar, :team_id, :position_id, :remember_me
+    end
+    devise_parameter_sanitizer.permit(:sign_in) do |user_params|
+      user_params.permit :username, :email, :password, :remember_me
+    end
+    devise_parameter_sanitizer.permit(:account_update) do |user_params|
+      user_params.permit :username, :birthday, :email, :password, :password_confirmation, :avatar, :team_id, :position_id, :remember_me
+    end
   end
 end

@@ -1,6 +1,8 @@
 class Admin::TeamsController < Admin::ApplicationController
   before_action :load_team, only: %i(edit update destroy show add_member update_member)
   before_action :load_all_user, only: %i(new edit update add_member create)
+  # skip_authorization_check
+
   def new
     @team = Team.new
   end

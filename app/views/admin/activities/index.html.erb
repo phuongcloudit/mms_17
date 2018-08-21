@@ -1,0 +1,45 @@
+<% provide :title, t(".title") %>
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i><%= t ".data_table" %></h1>
+    <p><%= t ".table_to" %></p>
+  </div>
+  <ul class="app-breadcrumb breadcrumb side">
+    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+    <li class="breadcrumb-item"><%= t ".admin" %></li>
+    <li class="breadcrumb-item active"><a href="#"><%= t ".activity" %></a></li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="tile">
+      <h1><%= t ".activity_log" %></h1>
+      <div class="tile-body">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">UserID</th>
+              <th scope="col">Username</th>
+              <th scope="col">Action</th>
+              <th scope="col">Description</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @activities.each do |activity| %>
+              <tr>
+                <td scope="row"><%= activity.owner.id if activity.owner %></td>
+                <td><%= link_to activity.owner.name, activity.owner if activity.owner %></td>
+                <td><%= activity.key if activity.key %></td>
+                <td><%= render_activity activity %></td>
+                <td><%= activity.created_at.strftime("%c") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= will_paginate %>
+      </div>
+    </div>
+  </div>
+</div>
+
